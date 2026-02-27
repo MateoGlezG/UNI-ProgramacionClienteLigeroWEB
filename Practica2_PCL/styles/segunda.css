@@ -1,0 +1,78 @@
+/*documento css para ajutar los estilos a las fotos de las prácticas, 
+referencias de los colores en index.css, hoja de estilos de la práctica 1 modificada*/
+
+body {
+    font-family: sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+div{
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.container{
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+}
+
+.title{ /*para contrarrestar el padding que puse en el div*/
+    padding:0;
+    margin:0
+}
+
+div img{
+    max-width: 40vh;
+}
+div img:hover{
+    transform: scale(1.05);
+}
+
+h1 {
+    color: #003b7e;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.title h3{
+    padding:0;
+    margin:0;
+}
+
+.title-pag2 h3{
+    color: #666; 
+    margin: 0;
+    padding-bottom: 3%;
+    border-bottom: 2px solid #003b7e;
+}
+
+.tabla-profesores h4{
+    background-color: #003b7e;
+    color:#f4f4f4;
+    padding: 1%;
+    border-radius: 5px;
+}
+
+table{
+    width:100%;
+    border: 1px solid #666;
+    border-color: #666;
+    border-collapse: collapse; 
+}
+
+table tr td{
+    border: 1px solid #666;
+    border-collapse: collapse;
+}
+
+/*footer*/
+.footer {
+    margin-top: 30px;
+    font-size: 0.8em;
+    color: #666;
+    text-align: center;
+}
