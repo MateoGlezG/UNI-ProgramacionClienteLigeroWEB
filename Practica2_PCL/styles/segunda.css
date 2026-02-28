@@ -22,7 +22,7 @@ div{
 
 .title{ /*para contrarrestar el padding que puse en el div*/
     padding:0;
-    margin:0
+    margin:0;
 }
 
 div img{
@@ -38,9 +38,15 @@ h1 {
     margin-bottom: 0;
 }
 
+h3{
+    color: #003b7e;
+    border-bottom:2px solid #003b7e;
+}
+
 .title h3{
     padding:0;
     margin:0;
+    border: 0;
 }
 
 .title-pag2 h3{
@@ -60,6 +66,7 @@ h1 {
 
 .tabla-profesores table{
     width:100%;
+    background-color: #f1eded;
     border: 1px solid #bebcbc;
     border-collapse: collapse; 
 }
@@ -73,6 +80,7 @@ h1 {
 .tabla-des{
     border: 1px solid #bebcbc;
     padding-left:2vh;
+    padding-right: 2vh;
 }
 
 .tabla-des h4{
@@ -80,6 +88,11 @@ h1 {
     padding-left:0;
     margin-left:0;
     margin-bottom: 0;
+}
+
+.tabla-des div{
+    margin-right: 0;
+    padding-right: 0;
 }
 
 .tabla-des p{
@@ -96,6 +109,59 @@ h1 {
 .tabla-des table tr td{
     border: 1px dotted #bebcbc;
     border-collapse: collapse;
+}
+
+.tabla-des ol{
+    margin: 0;
+}
+
+
+/*TERCERA .HTML*/
+.tabla-contactos h3{
+    border: 0;
+}
+
+.tabla-contactos table{
+    width:100%;
+    border: 1px solid #bebcbc;
+    border-collapse: collapse;
+}
+
+.tabla-contactos caption{
+    margin-bottom: 1vh;
+}
+
+.tabla-contactos table tr th{
+    background-color: #003b7e;
+    color:#f4f4f4;
+    padding: 2vh;
+    border: 1px solid #bebcbc;
+    border-collapse: collapse;
+}
+
+.tabla-contactos table tr td{
+    color: #4b4a4a;
+    border: 1px solid #bebcbc;
+    border-collapse: collapse;
+    padding: 1vh;
+}
+
+.boton{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-top: 7vh;
+}
+.boton button{
+    border: 1px solid #003b7e;
+    color: #003b7e;
+    border-radius: 2px;
+    padding: 1.5vh;
+}
+
+.boton a{
+    text-decoration: none;
+    color: #003b7e;
 }
 
 /*footer*/
