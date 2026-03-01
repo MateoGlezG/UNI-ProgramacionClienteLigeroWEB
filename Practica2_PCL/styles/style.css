@@ -158,6 +158,9 @@ h3{
     border-radius: 2px;
     padding: 1.5vh;
 }
+.boton:hover{
+    transform: scale(0.95);
+}
 
 .boton a{
     text-decoration: none;
