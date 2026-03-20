@@ -1,0 +1,45 @@
+/* index.css - Control de posición de capas principales */
+
+body {
+
+
+
+    background-color: #f0f0f0;
+}
+
+#menu {
+   
+    width: 200px;
+    height: 300px;
+
+    /*background-color: aqua; */
+}
+
+#principal {
+   
+    width: 600px;
+    height: 300px;
+   
+
+    /* background-color: rgb(255, 166, 0); */
+}
+
+#cabecera {
+  
+    width: 800px;
+    height: 150px;
+
+    /*background-color: yellow; */
+}
+
+#pie {
+
+   
+
+    
+    width: 800px;
+    height: 120px;
+   
+ 
+    /*background-color: greenyellow; */
+}
