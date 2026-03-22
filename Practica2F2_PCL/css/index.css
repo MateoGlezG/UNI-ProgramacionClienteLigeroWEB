@@ -1,36 +1,81 @@
 /* index.css - Control de posición de capas principales */
 
 body {
-
-
-
+    border: 0;
+    margin:0;
+    padding:0;
     background-color: #f0f0f0;
 }
 
-#menu {
-   
-    width: 200px;
-    height: 300px;
+/*HEADER*/
+#cabecera{
+    width:100%;
+    height: 20vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family:  sans-serif;
+}
 
-    /*background-color: aqua; */
+#cabecera img{
+    width: 120px;
+    height: 120px;
+}
+
+#cabecera div{
+    display: block;
+    justify-items: center;
+    color: red;
+}
+
+#cabecera div span{
+    color: blue;
+}
+
+#cabecera .upm{
+    color: #000;
+}
+
+#cabecera .upm span{
+    color: red;
+    font-size: 1.4em;
+    vertical-align:middle; /*esto sirve para alinear las letras con el texto en el medio para que quede cuadrado*/
+}
+
+
+/*MAIN */
+.content{
+    border: 0;
+    padding:0;
+    display: flex;
+    width:100%;
+    height: 50vh;
+}
+
+#menu {
+    width: 25%;
+    padding-left: 2%; 
+    padding-top: 3%;
+    box-sizing: border-box; /*asi el width ya cuenta con el padding y el border, content-box → width + padding + border suman / border-box → el width ya incluye padding y border*/
+}
+
+#menu a{
+    display: block;
+    text-decoration: none;
+    color:  #004080;
+}
+#menu a:hover{
+    transform: translateX(5px);
+    color:#007bff;
 }
 
 #principal {
-   
-    width: 600px;
-    height: 300px;
-   
-
-    /* background-color: rgb(255, 166, 0); */
+    width: 75%;
+    box-sizing: border-box;  
+    justify-items: center;
+    background-color: rgb(255, 166, 0); 
 }
 
-#cabecera {
-  
-    width: 800px;
-    height: 150px;
-
-    /*background-color: yellow; */
-}
 
 #pie {
 

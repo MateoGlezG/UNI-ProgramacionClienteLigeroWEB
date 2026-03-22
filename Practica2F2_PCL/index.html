@@ -18,85 +18,114 @@
   </head>
 
   <body>
-    <div id="cabecera">
+    <div id="cabecera"> <!--HEADER-->
       <div>
         <h3><span>G</span>estión de Espacios y Logística</h3>
         <h3><span>R</span>eserva de Puestos - Sede Central 2026</h3>
-        <h2><span>U</span>niversidad <span>P</span>olitecnica de <span>M</span>adrid</h2>
+        <h3 class="upm"><span>U</span>niversidad <span>P</span>olitécnica de <span>M</span>adrid</h3>
       </div>
-      <img src="">
+      <img src=" https://cdn-icons-png.flaticon.com/512/3222/3222640.png " alt="imagen-upm-p2f2">
       
     </div>
 
-    <div id="menu">
-      <ul>
-        <li><a href="#" onclick="cambiarCapas('datos_empleado')">Identificación usuario</a></li> <!--eh href se usa # porque es un enlace vacio que redirige hacia la propia página, apunta al ancla interna del documento, para que no tenga ningun efecto se puede poner retun false; al final-->
-        <li><a href="#" onclick="cambiarCapas(reserva_puesto)">Configuración</a></li>
-        <li><a href="#" onclick="cambiarCapas('equipamiento')">Equipamiento</a></li>
-        <li><a href="#" onclick="cambiarCapas('reserva_puesto')">Comentarios</a></li>
-      </ul>
-    </div>
+    <div class="content"> <!--MAIN-->
+      <div id="menu">
+        <a href="#" onclick="cambiarCapas('datos_empleado')">Identificación usuario</a> <!--eh href se usa # porque es un enlace vacio que redirige hacia la propia página, apunta al ancla interna del documento, para que no tenga ningun efecto se puede poner retun false; al final-->
+        <a href="#" onclick="cambiarCapas('reserva_puesto')">Configuración</a>
+        <a href="#" onclick="cambiarCapas('equipamiento')">Equipamiento</a>
+        <a href="#" onclick="cambiarCapas('notas_adicionales')">Comentarios</a>
+      </div>
 
-    <!--<<<<<<<<<<<<<<PRINCIPAL-->
-    <div id="principal" style="display: block;">
-     <form method="get" id="formulario-gestion" action="reservar_puesto">
-        <!--opcion del menu de IDENTIFICACION USUARIO-->
-        <div id="datos_empleado">
-          <article>
-            <img src="">
-            <h3>IDENTIFICACION DEL USUARIO</h3>
-          </article>
-          <div>
-            <label for="name">Nombre: </label>
-            <input type="text" placeholder="Nombre Apellido" required> 
-          </div>
-          <div>
-            <label form="departamento">Departamento: </label>
-            <select required>
-              <option value="0">Seleccione departamento</option>
-            </select>
+      <!--opcion del menu de PRINCIPAL-->
+      <div id="principal">
+        <form method="get" id="formulario-gestion" action="reservar_puesto">
+          <!--opcion del menu de IDENTIFICACION USUARIO-->
+          <div id="datos_empleado">
+            <article>
+              <!--<img src=""> haria falta por si hubiera que insertar los emojis como imagenes y se centra con el texto con css-->
+              <h3>🏛️ IDENTIFICACION DEL USUARIO</h3>
+            </article>
+            <div>
+              <label for="name">Nombre: </label>
+              <input type="text" placeholder="Nombre Apellido" required> 
             </div>
-          
-        </div>
-
-        <!--opcion del menu de  CONFIGURACION-->
-        <div id="reserva_puesto" style="display: ;">
-          <article>
-            <img src="">
-            <h3>PERIFÉRICOS REQUERIDOS</h3>
-          </article>
-          <div>
-            <label for="espacio"> Tipo de Espacio: </label>
-            <input type="radio" id="espacio" value="escritorio">
-            <label for="espacio"> Escritorio</label>
-            <input type="radio" id="espacio" value="despacho">
-            <label for="espacio">Despacho privado</label>
-            <input type="radio" id="espacio" value="sala">
-            <label for="espacio">Sala de Juntas</label>
+            <div>
+              <label for="departamento">Departamento: </label>
+              <select id="departamento">
+                <option value="0">Seleccione departamento</option>
+              </select>
+            </div>
+            
           </div>
-        
+
+          <!--opcion del menu de  CONFIGURACION-->
+          <div id="reserva_puesto" style="display:none ;"> <!--style display none para no mostrarlo -->
+            <article>
+              <!--<img src=""> haria falta por si hubiera que insertar los emojis como imagenes y se centra con el texto con css-->
+              <h3>​📍​ CONFIGURACIÓN DEL PUESTO</h3>
+            </article>
+            <div>
+              <p>Tipo de Espacio: </p>
+              <fieldset style="border: 0">
+                <input type="radio" name="espacio" id="escritorio" value="escritorio">
+                <label for="escritorio"> Escritorio</label>
+                <input type="radio" name="espacio" id="despacho" value="despacho">
+                <label for="despacho">Despacho privado</label>
+                <input type="radio" name="espacio" id="sala" value="sala">
+                <label for="sala">Sala de Juntas</label>
+              </fieldset>
+
+              <label form="planta">Planta: </label>
+              <select>
+                <option value="0">Seleccione Planta</option>
+              </select>
+              
+            </div>
+
+          </div>
+
+          <!--opcion del menu de  EQUIPAMIENTO-->
+          <div id="equipamiento" style="display: none;">
+            <article>
+              <!--<img src=""> haria falta por si hubiera que insertar los emojis como imagenes y se centra con el texto con css-->
+              <h3>​🖥️​ PERIFÉRICOS REQUERIDOS</h3>
+            </article>
+            <div>
+              <p>Marque lo que necesite en el puesto: </p>
+              <fieldset style="border: 0">
+                <input type="checkbox" name="perifericos" id="monitor-doble">
+                <label for="monitor-doble">Monitor doble</label>
+                <input type="checkbox" name="perifericos" id="teclado">
+                <label for="teclado">Teclado Ergonómico</label>
+                <input type="checkbox" name="perifericos" id="videollamada">
+                <label for="videollamada">Kit Videollamada</label>
+              </fieldset> 
+            </div>
+          </div>
+
+          <!--opcion del menu de COMENTARIOS-->
+          <div id="notas_adicionales" style="display: none;">
+            <article>
+              <!--<img src=""> haria falta por si hubiera que insertar los emojis como imagenes y se centra con el texto con css-->
+              <h3>​📝​ NOTAS PARA MANTENIMIENTO</h3>
+            </article>
+            <div>
+              <textarea id="notas" name="notas" placeholder="Ej: Necesito una silla para probelmas de espalda o adaptador MAc"></textarea>
+            </div>
+          </div>
+
+        </form>
+
+        <!--botones-->
+        <div class="botones">
+          <button>Confirmar Reserva</button>
+          <button>Borrar Datos</button>
         </div>
 
-        <!--opcion del menu de  EQUIPAMIENTO-->
-        <div id="equipamiento">
+      </div> <!--fin de principal-->
+    </div><!--fin del contenido del medio-->
 
-        </div>
-
-        <!--opcion del menu de COMENTARIOS-->
-      <div id="notas_adicionales">
-
-      </div>
-
- </form>
-
-      <div class="botones">
-        <button>Confirmar Reserva</button>
-        <button>Borrar Datos</button>
-      </div>
-
-    </div>
-
-    <div id="pie">
+    <div id="pie"> <!--FOOTER-->
       <p>Aquí irá la respuesta generada desde el servidor</p>
     </div>
   </body>
