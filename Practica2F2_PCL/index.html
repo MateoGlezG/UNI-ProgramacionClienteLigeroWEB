@@ -30,21 +30,22 @@
 
     <div id="menu">
       <ul>
-        <li><a>Identificación usuario</a></li>
-        <li><a>Configuración</a></li>
-        <li><a>Equipamiento</a></li>
-        <li><a>Comentarios</a></li>
+        <li><a href="#" onclick="cambiarCapas('datos_empleado')">Identificación usuario</a></li> <!--eh href se usa # porque es un enlace vacio que redirige hacia la propia página, apunta al ancla interna del documento, para que no tenga ningun efecto se puede poner retun false; al final-->
+        <li><a href="#" onclick="cambiarCapas(reserva_puesto)">Configuración</a></li>
+        <li><a href="#" onclick="cambiarCapas('equipamiento')">Equipamiento</a></li>
+        <li><a href="#" onclick="cambiarCapas('reserva_puesto')">Comentarios</a></li>
       </ul>
     </div>
 
+    <!--<<<<<<<<<<<<<<PRINCIPAL-->
     <div id="principal" style="display: block;">
-      <div class="identificacion-us">
-        <article>
-          <img src="">
-          <h3>IDENTIFICACION DEL USUARIO</h3>
-        </article>
-        
-        <form method="post">
+     <form method="get" id="formulario-gestion" action="reservar_puesto">
+        <!--opcion del menu de IDENTIFICACION USUARIO-->
+        <div id="datos_empleado">
+          <article>
+            <img src="">
+            <h3>IDENTIFICACION DEL USUARIO</h3>
+          </article>
           <div>
             <label for="name">Nombre: </label>
             <input type="text" placeholder="Nombre Apellido" required> 
@@ -54,23 +55,39 @@
             <select required>
               <option value="0">Seleccione departamento</option>
             </select>
-          </div>
-        </form>
-      </div>
-
-      <div class="config">
-        <article>
-          <img src="">
-          <h3>PERIFÉRICOS REQUERIDOS</h3>
-        </article>
-        <form>
+            </div>
           
-        </form>
+        </div>
+
+        <!--opcion del menu de  CONFIGURACION-->
+        <div id="reserva_puesto" style="display: ;">
+          <article>
+            <img src="">
+            <h3>PERIFÉRICOS REQUERIDOS</h3>
+          </article>
+          <div>
+            <label for="espacio"> Tipo de Espacio: </label>
+            <input type="radio" id="espacio" value="escritorio">
+            <label for="espacio"> Escritorio</label>
+            <input type="radio" id="espacio" value="despacho">
+            <label for="espacio">Despacho privado</label>
+            <input type="radio" id="espacio" value="sala">
+            <label for="espacio">Sala de Juntas</label>
+          </div>
+        
+        </div>
+
+        <!--opcion del menu de  EQUIPAMIENTO-->
+        <div id="equipamiento">
+
+        </div>
+
+        <!--opcion del menu de COMENTARIOS-->
+      <div id="notas_adicionales">
+
       </div>
 
-      <div class="perof">
-
-      </div>
+ </form>
 
       <div class="botones">
         <button>Confirmar Reserva</button>
