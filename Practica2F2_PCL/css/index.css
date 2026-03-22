@@ -61,6 +61,7 @@ body {
 
 #menu a{
     display: block;
+    padding: 2%;
     text-decoration: none;
     color:  #004080;
 }
