@@ -1,0 +1,183 @@
+/*documento css para ajutar los estilos a las fotos de las prácticas, 
+referencias de los colores en index.css, hoja de estilos de la práctica 1 modificada*/
+
+body {
+    font-family: sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+div{
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.container{
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+}
+
+.title{ /*para contrarrestar el padding que puse en el div*/
+    padding:0;
+    margin:0;
+}
+
+div img{
+    max-width: 30vh;
+}
+div img:hover{
+    transform: scale(1.05);
+}
+
+h1 {
+    color: #003b7e;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+h3{
+    color: #003b7e;
+    border-bottom:2px solid #003b7e;
+}
+
+.title h3{
+    padding:0;
+    margin:0;
+    border: 0;
+}
+
+.title-pag2 h3{
+    color: #666; 
+    margin: 0;
+    padding-bottom: 3%;
+    border-bottom: 2px solid #003b7e;
+}
+
+/*tabla profesores*/
+.tabla-profesores h4{
+    background-color: #003b7e;
+    color:#f4f4f4;
+    padding: 1%;
+    border-radius: 5px;
+}
+
+.tabla-profesores table{
+    width:100%;
+    background-color: #f1eded;
+    border: 1px solid #bebcbc;
+    border-collapse: collapse; 
+}
+
+.tabla-profesores table tr td{
+    border: 1px solid #bebcbc;
+    border-collapse: collapse;
+}
+
+/*descripcion de asignatura*/
+.tabla-des{
+    border: 1px solid #bebcbc;
+    padding-left:2vh;
+    padding-right: 2vh;
+}
+
+.tabla-des h4{
+    color:red;
+    padding-left:0;
+    margin-left:0;
+    margin-bottom: 0;
+}
+
+.tabla-des div{
+    margin-right: 0;
+    padding-right: 0;
+}
+
+.tabla-des p{
+    margin: 1%;
+    padding: 0;
+}
+
+.tabla-des table{
+    border: 1px dotted #bebcbc;
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 3vh;
+}
+.tabla-des table tr td{
+    border: 1px dotted #bebcbc;
+    border-collapse: collapse;
+}
+
+.tabla-des ol{
+    margin: 0;
+}
+
+
+/*TERCERA .HTML*/
+.tabla-contactos h3{
+    border: 0;
+}
+
+.tabla-contactos table{
+    width:100%;
+    border: 1px solid #bebcbc;
+    border-collapse: collapse;
+}
+
+.tabla-contactos caption{
+    margin-bottom: 1vh;
+}
+
+.tabla-contactos table tr th{
+    background-color: #003b7e;
+    color:#f4f4f4;
+    padding: 2vh;
+    border: 1px solid #bebcbc;
+    border-collapse: collapse;
+}
+
+.tabla-contactos table tr td{
+    color: #4b4a4a;
+    border: 1px solid #bebcbc;
+    border-collapse: collapse;
+    padding: 1vh;
+}
+
+/*tabla compleja - guia de practicas*/
+.tabla-practicas h3{
+    border: 0;
+}
+
+/*boton*/
+
+.boton{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-top: 7vh;
+}
+.boton button{
+    border: 1px solid #003b7e;
+    color: #003b7e;
+    border-radius: 2px;
+    padding: 1.5vh;
+}
+.boton:hover{
+    transform: scale(0.95);
+}
+
+.boton a{
+    text-decoration: none;
+    color: #003b7e;
+}
+
+/*footer*/
+.footer {
+    margin-top: 30px;
+    font-size: 0.8em;
+    color: #666;
+    text-align: center;
+}
