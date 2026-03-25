@@ -46,7 +46,6 @@ body {
 
 /*MAIN */
 .content{
-    border: 3px solid red;
     background-color: #fff;
     padding:0;
     margin: 0;
@@ -78,7 +77,6 @@ body {
 #principal {
     flex:1; /*ocupa todo el espacio sobrante*/
     box-sizing: border-box;
-    border: 2px solid blue;
     display: flex;
     flex-direction: column;
 }
@@ -87,7 +85,6 @@ body {
     padding: 3%;
     flex: 1; /*ajusta el contenido para ocupar lo sobrante y quiero que se rellene por el formulario */
     background-color: #f0f0f0; 
-    border:3px solid purple;
 }
 
 #principal form > div{ /*afecta solo a los div que sean inmediatamente inferiores, no afecta a los hijos de estos ni a los padres*/

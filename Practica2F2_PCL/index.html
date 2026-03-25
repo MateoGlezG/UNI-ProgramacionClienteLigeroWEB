@@ -46,13 +46,14 @@
               <h3>🏛️ IDENTIFICACION DEL USUARIO</h3>
             </article>
             <div>
-              <label for="name">Nombre: </label>
-              <input type="text" id="name" placeholder="Nombre Apellido" required> 
+              <label for="empleado">Nombre: </label>
+              <input type="text" id="empleado" name="empleado" placeholder="Nombre Apellido" required> <!--id identifica el input para un label o css, name nombra el dato del formulario para enviar-->
             </div>
             <div>
               <label for="departamento">Departamento: </label>
-              <select id="departamento">
+              <select id="departamento" name="departamento">
                 <option value="0">Seleccione departamento</option>
+                <option value="PCL">Programacion Cliente Web</option>
               </select>
             </div>
             
@@ -67,17 +68,19 @@
             <div>
               <p>Tipo de Espacio: </p>
               <fieldset style="border: 0">
-                <input type="radio" name="espacio" id="escritorio" value="escritorio">
+                <input type="radio" name="tipo" id="escritorio" value="escritorio">
                 <label for="escritorio"> Escritorio</label>
-                <input type="radio" name="espacio" id="despacho" value="despacho">
+                <input type="radio" name="tipo" id="despacho" value="despacho">
                 <label for="despacho">Despacho privado</label>
-                <input type="radio" name="espacio" id="sala" value="sala">
+                <input type="radio" name="tipo" id="sala" value="sala">
                 <label for="sala">Sala de Juntas</label>
               </fieldset>
 
               <label for="planta">Planta: </label>
-              <select id="planta">
-                <option value="0">Seleccione Planta</option>
+              <select id="planta" name="planta">
+                <option value="">Seleccione Planta</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
               </select>
               
             </div>
@@ -93,11 +96,11 @@
             <div>
               <p>Marque lo que necesite en el puesto: </p>
               <fieldset style="border: 0">
-                <input type="checkbox" name="perifericos" id="monitor-doble">
+                <input type="checkbox" name="extra" id="monitor-doble" value="monitor doble">
                 <label for="monitor-doble">Monitor doble</label>
-                <input type="checkbox" name="perifericos" id="teclado">
+                <input type="checkbox" name="extra" id="teclado" value="Teclado">
                 <label for="teclado">Teclado Ergonómico</label>
-                <input type="checkbox" name="perifericos" id="videollamada">
+                <input type="checkbox" name="extra" id="videollamada" value="Kit videollamada">
                 <label for="videollamada">Kit Videollamada</label>
               </fieldset> 
             </div>
@@ -118,7 +121,7 @@
 
         <!--botones-->
         <div class="botones">
-          <button class="confirm" form="formulario-gestion" type="submit" onclick="enviar(event)">Confirmar Reserva</button> <!--form sirve para conectarlo con el formulario y type para decir que hace en ese formulario, se podria evitar el form si se ponen los botones dentro del formulario-->
+          <button class="confirm" form="formulario-gestion" type="submit" onclick="validar(event)">Confirmar Reserva</button> <!--form sirve para conectarlo con el formulario y type para decir que hace en ese formulario, se podria evitar el form si se ponen los botones dentro del formulario-->
           <button class="borrar" form="formulario-gestion" type="reset">Borrar Datos</button>
         </div>
 
