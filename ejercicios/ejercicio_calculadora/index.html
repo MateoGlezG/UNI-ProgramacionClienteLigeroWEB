@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 1</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <style>
+        body {
+            font-size: 24px;
+        }
+
+        button {
+            font-size: 22px;
+            padding: 8px 12px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Sección de selección de color -->
+    <p style="text-align: center;">
+        Cambiar color de texto:
+        <button >Rojo</button>
+        <button >Azul</button>
+        <button >Verde</button>
+    </p>
+
+    <!-- Sección de botones de control (Centrados) -->
+    <p style="text-align: center;">
+        <button id="btnCalc">Calculadora</button>
+        <button id="btnPalabras">Cuenta palabras</button>
+    </p>
+
+    <hr>
+
+    <p class="introduccion">
+        Un <strong>formulario en HTML</strong> es un contenedor diseñado para recopilar información del usuario y
+        enviarla a un servidor. Se define mediante la etiqueta <code>&lt;form&gt;</code> y actúa como un puente entre el
+        visitante y la aplicación web, permitiendo desde simples suscripciones hasta complejos sistemas de registro o
+        compras en línea.
+    </p>
+
+    <p class="introduccion">
+        Para que un formulario sea funcional, suele incluir elementos como <strong>controles de entrada</strong>
+        (<code>&lt;input&gt;</code>, <code>&lt;textarea&gt;</code>), <strong>etiquetas</strong>
+        (<code>&lt;label&gt;</code>) para guiar al usuario, y un <strong>botón de envío</strong> que inicia el proceso
+        de entrega de los datos.
+    </p>
+
+    <p class="introduccion">
+        El evento <strong>onsubmit</strong> es un manejador de JavaScript que se dispara cuando el usuario intenta
+        enviar el formulario. Es fundamental para la <strong>validación de datos</strong> (comprobar errores antes del
+        envío) y para el <strong>control del flujo</strong>, permitiendo detener la recarga de la página mediante
+        <code>event.preventDefault()</code>.
+    </p>
+
+    <!-- Capas controladas -->
+    <div id="calculadora" style="display: none; padding: 10px; margin-top: 28px; margin-bottom: 10px;">
+        Esta es la capa en la que va el formulario para calcular operaciones básicas.
+    </div>
+
+    <div id="cuentaPalabras" style="display: none; padding: 10px; margin-top: 28px; margin-bottom: 10px;">
+        Esta es la <strong>Capa 2</strong> (Se activa/desactiva haciendo clic en el Botón Cuenta palabras).
+    </div>
+
+    <script>
+        // Función para cambiar el color de los párrafos de clase 'introduccion'
+        function cambiarColor(nuevoColor) {
+        }
+
+        // Lógica para el botón calculadora (Hover / Pasar el ratón)
+        const btnCalc = document.getElementById('btnCalc');
+        const calculadora = document.getElementById('calculadora');
+
+        const btnPalabras = document.getElementById('btnPalabras');
+        const cuentaPalabras = document.getElementById('cuentaPalabras');
+
+    </script>
+
+</body>
+
+</html>
